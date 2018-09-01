@@ -1,3 +1,5 @@
+// Ray changed var config from starter template.
+
 "use strict";
  
 var fs = require("fs");
