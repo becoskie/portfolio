@@ -9,7 +9,7 @@ exports.signin = function(req, res) {
 };
 
 exports.admin = function(req, res) {
-  res.render("admin");
+  res.render("admin",{ username: req.user.username, signedin: true });
 };
 
 exports.logout = function(req, res) {
