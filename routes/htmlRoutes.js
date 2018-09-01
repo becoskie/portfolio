@@ -1,4 +1,5 @@
 var db = require("../models");
+var Sequelize = require("sequelize");
 
 module.exports = function(app) {
   // Load index page
