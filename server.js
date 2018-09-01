@@ -12,7 +12,7 @@ var PORT = process.env.PORT || 8080;
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 // For Passport
 
@@ -43,7 +43,7 @@ models.sequelize
   });
 
 // Routes
-var authRoute = require("./routes/auth.js")(app, passport);
+require("./routes/auth.js")(app, passport);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
