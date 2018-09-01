@@ -4,7 +4,6 @@ var passport = require("passport");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-
 var db = require("./models");
 
 var app = express();
@@ -58,7 +57,6 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
-
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
