@@ -6,7 +6,7 @@ module.exports = function(app, passport) {
   app.get("/admin", isLoggedIn, authController.admin);
   app.get("/logout", authController.logout);
   app.get("/create", isLoggedIn, authController.create);
-  app.get("/edit", isLoggedIn, authController.edit);
+  app.get("/edit/:id", isLoggedIn, authController.edit);
 
   app.post(
     "/signup",

@@ -1,25 +1,30 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  // create a new project
   app.post("/api/project", function(req, res) {
-    console.log(req.body);
     db.project.create(req.body).then(function(dbProject) {
       res.json(dbProject);
     });
   });
 
-  // Get all examples
+  // Get all projects
   app.get("/api/projects", function(req, res) {
     db.project.findAll({}).then(function(dbProjects) {
       res.json(dbProjects);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  app.put("/api/projects", function(req, res) {
+    db.project
+      .update(req.body, {
+        where: {
+          project_id: req.body.projectId
+        }
+      })
+      .then(function(data) {
+        res.json(data);
+      });
   });
 
   // Delete an example by id

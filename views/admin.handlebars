@@ -16,7 +16,7 @@
             <ul id="project-list" class="list-group">
                 {{#each projects}}
                 <li data-id="{{this.project_id}}" class="list-group-item">
-                    <a href="project/{{this.project_id}}">{{this.title}}</a>
+                    <a href="edit/{{this.project_id}}">{{this.title}}</a>
                     <button class="btn btn-danger float-right delete">ｘ</button>
                 </li>
                 {{/each}}

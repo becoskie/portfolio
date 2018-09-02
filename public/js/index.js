@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#project_submit").on("click", projectSubmit);
+  $("#project_edit").on("click", projectEdit);
 });
 
 var API = {
@@ -23,6 +24,13 @@ var API = {
     return $.ajax({
       url: "api/project/" + id,
       type: "DELETE"
+    });
+  },
+  updateProject: function(project) {
+    $.ajax({
+      method: "PUT",
+      url: "/api/projects",
+      data: project
     });
   }
 };
@@ -64,12 +72,56 @@ var projectSubmit = function(event) {
       .val()
       .trim()
   };
-  console.log(project);
-  $(":input").each(function() {
-    if ($(this).val() === "") alert("Empty Fields!!");
-  });
 
   API.saveProject(project);
+
+  $(":input").each(function() {
+    $(this).val("");
+  });
+
+  window.location.href = "/admin";
+};
+
+var projectEdit = function(event) {
+  event.preventDefault();
+  var project = {
+    projectId: $("#proj_id").val(),
+    title: $("#edit_proj_title")
+      .val()
+      .trim(),
+    shortDesc: $("#edit_short_desc")
+      .val()
+      .trim(),
+    longDesc: $("#edit_long_desc")
+      .val()
+      .trim(),
+    projectOps: $("#edit_proj_op")
+      .val()
+      .trim(),
+    buildItems: $("#edit_build_items")
+      .val()
+      .trim(),
+    projectType: $("input[name=options]:checked")
+      .val()
+      .trim(),
+    launchLink: $("#edit_launch_link")
+      .val()
+      .trim(),
+    gitLink: $("#edit_git_link")
+      .val()
+      .trim(),
+    dataLink: $("#edit_data_link")
+      .val()
+      .trim(),
+    svgLink: $("#edit_svg_link")
+      .val()
+      .trim(),
+    imgLink: $("#edit_img_link")
+      .val()
+      .trim()
+  };
+
+  API.updateProject(project);
 
   $(":input").each(function() {
     $(this).val("");
