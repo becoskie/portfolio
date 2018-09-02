@@ -1,10 +1,66 @@
 <div id="create">
-  <div class="container">
-    <div class="row">
-      <div class="col-10 offset-1">
-        <h2>create page</h2>
-        <a href="/admin">Admin</a>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <h2>create page</h2>
+                <a href="/admin">Admin</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+<form class="col-6 offset-3">
+    <div class="form-group">
+        <label for="title">Project title</label>
+        <input type="text" class="form-control" id="proj_title" aria-describedby="emailHelp" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+        <label for="short_desc">Short Description</label>
+        <input type="text" class="form-control" id="short_desc" placeholder="Project short description">
+    </div>
+    <div class="form-group">
+        <label for="long_desc">Long Description</label>
+        <textarea class="form-control" id="long_desc" rows="10"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="proj_op">Poject Opportunities</label>
+        <textarea class="form-control" id="proj_op" rows="10"></textarea>
+    </div>
+    <div class="container">
+        <h5 id="radio_label">Select Project type</h5>
+    </div>
+    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" value="solo" id="dev_solo" autocomplete="off"> Solo
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" value="group" id="group" autocomplete="off"> Group
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="build_items">Items used for construction</label>
+        <input type="text" class="form-control" id="build_items" placeholder="comma sep eg. html,css,firebase">
+    </div>
+    <div class="form-group">
+        <label for="launch_link">Launch link to working project</label>
+        <input type="text" class="form-control" id="launch_link" placeholder="http://whatever">
+    </div>
+    <div class="form-group">
+        <label for="git_link">Git link to repo</label>
+        <input type="text" class="form-control" id="git_link" placeholder="http://whatever">
+    </div>
+    <div class="form-group">
+        <label for="data_link">Data link to open large view</label>
+        <input type="text" class="form-control" id="data_link" placeholder="data-project =">
+    </div>
+    <div class="form-group">
+        <label for="svg_link">Small image svg</label>
+        <input type="text" class="form-control" id="svg_link" placeholder="example.svg">
+    </div>
+    <div class="form-group">
+        <label for="img_link">Large image jpeg</label>
+        <input type="text" class="form-control" id="img_link" placeholder="example.jpeg">
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-dark mt-3" id="project_submit" data-submit="">Submit</button>
+    </div>
+</form>
