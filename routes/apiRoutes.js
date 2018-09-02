@@ -1,8 +1,10 @@
 var db = require("../models");
+var Sequelize = require("sequelize");
 
 module.exports = function(app) {
   app.post("/api/project", function(req, res) {
-    db.Project.create(req.body).then(function(dbProject) {
+    console.log(req.body);
+    db.project.create(req.body).then(function(dbProject) {
       res.json(dbProject);
     });
   });

@@ -29,7 +29,6 @@ var API = {
 
 var projectSubmit = function(event) {
   event.preventDefault();
-
   var project = {
     title: $("#proj_title")
       .val()
@@ -49,23 +48,23 @@ var projectSubmit = function(event) {
     projectType: $("input[name=options]:checked")
       .val()
       .trim(),
-    launchLink: $("launch_link")
+    launchLink: $("#launch_link")
       .val()
       .trim(),
-    gitLink: $("git_link")
+    gitLink: $("#git_link")
       .val()
       .trim(),
-    dataLink: $("data_link")
+    dataLink: $("#data_link")
       .val()
       .trim(),
-    svgLink: $("svg_link")
+    svgLink: $("#svg_link")
       .val()
       .trim(),
-    imgLink: $("img_link")
+    imgLink: $("#img_link")
       .val()
       .trim()
   };
-
+  console.log(project);
   $(":input").each(function() {
     if ($(this).val() === "") alert("Empty Fields!!");
   });
