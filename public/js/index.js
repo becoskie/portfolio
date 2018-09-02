@@ -15,7 +15,7 @@ var API = {
   },
   getProject: function() {
     return $.ajax({
-      url: "api/project",
+      url: "api/projects",
       type: "GET"
     });
   },

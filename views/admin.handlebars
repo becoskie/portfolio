@@ -1,13 +1,29 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div>
-        <h2>becoskie admin</h2>
-        <a href="/create">Create Page</a>
-        <a href="/edit">Edit</a>
-        <p>delete page</p>
-        <a href="/logout">Logout</a>
-      </div>
+<div id="admin">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h2>becoskie admin</h2>
+                {{username}}
+                <a href="/create">Create Page</a>
+                <a href="/edit">Edit</a>
+                <p>delete page</p>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="col-6">
+            <h3>Projects:</h3>
+            <ul id="project-list" class="list-group">
+                {{#each projects}}
+                <li data-id="{{this.project_id}}" class="list-group-item">
+                    <a href="project/{{this.project_id}}">{{this.title}}</a>
+                    <button class="btn btn-danger float-right delete">ｘ</button>
+                </li>
+                {{/each}}
+            </ul>
+
+        </div>
+
     </div>
-  </div>
+</div>
 </div>

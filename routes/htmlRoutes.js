@@ -1,9 +1,9 @@
 var db = require("../models");
-var Sequelize = require("sequelize");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+    console.log("INDEX!!!!");
     res.render("index");
   });
   app.get("/signup", function(req, res) {
@@ -12,13 +12,23 @@ module.exports = function(app) {
   app.get("/signin", function(req, res) {
     res.render("signin");
   });
+
   app.get("/admin", function(req, res) {
-    res.render("admin");
+    console.log("Admin!!!!");
+    db.project.findAll({}).then(function(dbProjects) {
+      console.log(dbProjects);
+      res.render("admin", {
+        msg: "Welcome!",
+        projects: dbProjects
+      });
+    });
   });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.render("example", {
         example: dbExample
       });

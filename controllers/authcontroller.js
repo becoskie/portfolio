@@ -1,4 +1,5 @@
 var exports = (module.exports = {});
+var db = require("../models");
 
 exports.signup = function(req, res) {
   res.render("signup");
@@ -9,7 +10,11 @@ exports.signin = function(req, res) {
 };
 
 exports.admin = function(req, res) {
-  res.render("admin",{ username: req.user.username, signedin: true });
+  db.project.findAll({}).then(function(dbProjects) {
+    res.render("admin", {
+      projects: dbProjects
+    });
+  });
 };
 
 exports.create = function(req, res) {

@@ -1,5 +1,4 @@
 var db = require("../models");
-var Sequelize = require("sequelize");
 
 module.exports = function(app) {
   app.post("/api/project", function(req, res) {
@@ -10,9 +9,9 @@ module.exports = function(app) {
   });
 
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/projects", function(req, res) {
+    db.project.findAll({}).then(function(dbProjects) {
+      res.json(dbProjects);
     });
   });
 
