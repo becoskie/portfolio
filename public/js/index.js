@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#project_submit").on("click", projectSubmit);
   $("#project_edit").on("click", projectEdit);
+  $(".delete").on("click", projectDelete);
 });
 
 var API = {
@@ -34,6 +35,12 @@ var API = {
     });
   }
 };
+
+var projectDelete = function(event) {
+  event.preventDefault();
+  API.deleteProject($(this).attr("id"));
+  window.location.href = "/admin";
+}
 
 var projectSubmit = function(event) {
   event.preventDefault();
