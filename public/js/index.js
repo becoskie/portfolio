@@ -39,7 +39,7 @@ var API = {
 var projectDelete = function(event) {
   event.preventDefault();
   API.deleteProject($(this).attr("id"));
-  window.location.href = "/admin";
+  location.reload();
 }
 
 var projectSubmit = function(event) {
