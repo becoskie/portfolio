@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("#project_submit").on("click", projectSubmit);
   $("#project_edit").on("click", projectEdit);
-  $(".delete").on("click", projectDelete);
+  $(".delete").on("dblclick", projectDelete);
 });
 
 var API = {
@@ -60,7 +60,7 @@ var projectSubmit = function(event) {
     buildItems: $("#build_items")
       .val()
       .trim(),
-    projectType: $("input[name=options]:checked")
+    projectType: $("#project_type")
       .val()
       .trim(),
     launchLink: $("#launch_link")
@@ -108,7 +108,7 @@ var projectEdit = function(event) {
     buildItems: $("#edit_build_items")
       .val()
       .trim(),
-    projectType: $("input[name=options]:checked")
+    projectType: $("#project_type")
       .val()
       .trim(),
     launchLink: $("#edit_launch_link")

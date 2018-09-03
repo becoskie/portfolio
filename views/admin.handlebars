@@ -5,8 +5,6 @@
                 <h2>becoskie admin</h2>
                 {{username}}
                 <a href="/create">Create Page</a>
-                <a href="/edit">Edit</a>
-                <p>delete page</p>
                 <a href="/logout">Logout</a>
             </div>
         </div>
@@ -17,7 +15,7 @@
                 {{#each projects}}
                 <li data-id="{{this.project_id}}" class="list-group-item">
                     <a href="edit/{{this.project_id}}">{{this.title}}</a>
-                    <button class="btn btn-danger float-right delete" id="{{this.project_id}}">ｘ</button>
+                    <button class="btn float-right delete" id="{{this.project_id}}"><i class="fa fa-trash-o" style="font-size:28px;color:#ff5e57"></i></button>
                 </li>
                 {{/each}}
             </ul>
