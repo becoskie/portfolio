@@ -1,27 +1,24 @@
-<div id="admin">
-    <div class="container">
-        <div class="row">
-            <div>
-                <h2>becoskie admin</h2>
-                {{username}}
-                <a href="/create">Create Page</a>
-                <a href="/logout">Logout</a>
+<header class="site-header">
+    <nav class="site-nav family-sans text-uppercase navbar navbar-expand-md bg-secondary navbar-dark">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="#home">porfolio admin</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/create">Create Page</a>
+                <a class="nav-item nav-link" href="/logout">Logout</a>
             </div>
         </div>
-        <div class="row"></div>
-        <div class="col-6">
-            <h3>Projects:</h3>
-            <ul id="project-list" class="list-group">
-                {{#each projects}}
-                <li data-id="{{this.project_id}}" class="list-group-item">
-                    <a href="edit/{{this.project_id}}">{{this.title}}</a>
-                    <button class="btn float-right delete" id="{{this.project_id}}"><i class="fa fa-trash-o" style="font-size:28px;color:#ff5e57"></i></button>
-                </li>
-                {{/each}}
-            </ul>
+    </nav>
+</header>
+<div class="col-6" id="admin">
+    <h3>Projects:</h3>
+    <ul id="project-list" class="list-group">
+        {{#each projects}}
+        <li data-id="{{this.project_id}}" class="list-group-item">
+            <a href="edit/{{this.project_id}}">{{this.title}}</a>
+            <button class="btn float-right delete" id="{{this.project_id}}"><i class="far fa-trash-alt" style="font-size:28px;color:#ff5e57"></i></button>
+        </li>
+        {{/each}}
+    </ul>
 
-        </div>
-
-    </div>
-</div>
 </div>
