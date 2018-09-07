@@ -105,9 +105,8 @@ var projectSubmit = function(event) {
       buildItems: $("#build_items")
         .val()
         .trim(),
-      projectType: $("#project_type")
-        .val()
-        .trim(),
+      solo: $('input[name="project"]:checked').val(),
+      // .trim(),
       launchLink: $("#launch_link")
         .val()
         .trim(),
@@ -124,7 +123,7 @@ var projectSubmit = function(event) {
         .val()
         .trim()
     };
-
+    console.log(project);
     API.saveProject(project);
 
     $(":input").each(function() {
@@ -153,9 +152,6 @@ var projectEdit = function(event) {
       .val()
       .trim(),
     buildItems: $("#edit_build_items")
-      .val()
-      .trim(),
-    projectType: $("#project_type")
       .val()
       .trim(),
     launchLink: $("#edit_launch_link")

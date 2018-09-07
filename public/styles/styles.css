@@ -60,6 +60,11 @@ a:hover{
   font-style: italic;
 }
 
+#team {
+  font-weight: bold;
+  color: var(--gray);
+}
+
 
 /* site header */
 .site-header {
@@ -88,7 +93,7 @@ a:hover{
   font-family: var(--font-family-title);
   color: var(--gray);
   line-height: 100%;
-  padding-bottom: 0.15em;
+  padding-bottom: .5em;
   margin-top: -0.2em;
 }
 
@@ -101,20 +106,20 @@ a:hover{
   padding-bottom: 40px;
 }
 
-.layout-multicolumn .photo-modal {
+.layout-multicolumn .project {
   transition: all 300ms ease-in-out;
 }
 
-.layout-multicolumn .photo-modal:hover {
+.layout-multicolumn .project:hover {
   transform: scale(1.0625) translateY(-2px);
 }
 
-.layout-multicolumn .photo-modal {
+.layout-multicolumn .project {
   transition: all 300ms ease-in-out;
 }
 
 .layout-multicolumn .layout-title {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .layout-social {

@@ -32,7 +32,7 @@
 <article id="page-about" class="page-section vertical-padding">
   <header class="page-section-header container text-center">
     <h2 class="page-section-title display-4 pt-4 text-center">About</h2>
-    <p class="page-section-text lead mx-md-5 ">
+    <p class="page-section-text lead mx-md-5">
       Offering creative design solutions to solve business problems is what I do best.<br/> I write in JavaScript, CSS, Java,
       and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability,
       and great user experiences.
@@ -45,26 +45,34 @@
 <article id="page-projects" class="page-section vertical-padding">
   <header class="page-section-header container text-center">
     <h2 class="page-section-title display-4 pt-4 text-center">Projects</h2>
-    <p class="page-section-text lead mx-md-5 ">
-      Offering creative design solutions to solve business problems is what I do best.<br/> I write in JavaScript, CSS, Java,
-      and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability,
-      and great user experiences.
-      <br/><br/> As a designer and a developer, I write code that conforms to industry standards and semantic best practices.
-      I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.
-    </p>
   </header>
   <section class="layout-multicolumn container family-sans text-center py-4">
     <div class="row justify-content-center py-2">
-{{#each project}}
-      <section class="photo-modal mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="images/images/ken.jpg" href="#">
-          <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+      {{#each project}} {{#if solo}}
+      <section class="project mb-5 col-md-4">
+        <a href="/project/{{this.project_id}}">
+          <img class="layout-image img-fluid rounded" src="images/thumbs/{{this.svgLink}}" alt="sample image">
         </a>
         <h5 class="layout-title mt-1">{{this.title}}</h5>
       </section>
-{{/each}}
+      {{/if}} {{/each}}
     </div>
   </section>
+
+{{#each project}} {{#unless solo}}
+  <section class="layout-multicolumn container family-sans text-center py-4">
+    <h4 id="team">Team Projects</h4>
+    <div class="row justify-content-center py-2">
+      <section class="project mb-5 col-md-4">
+        <a href="/project/{{this.project_id}}">
+          <img class="layout-image img-fluid rounded" src="images/thumbs/{{this.svgLink}}" alt="sample image">
+        </a>
+        <h5 class="layout-title mt-1">{{this.title}}</h5>
+      </section>
+    </div>
+  </section>
+  {{/unless}} {{/each}}
+
 </article>
 
 <article id="page-contact" class="page-section vertical-padding">
@@ -92,8 +100,7 @@
     <a class="text-reverse px-4" href="https://facebook.com/viewsource">
       <i class="far fa-envelope"></i>
     </a>
-    
+
   </div>
 
 </footer>
-

@@ -11,14 +11,14 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
+  app.get("/project/:id", function(req, res) {
+    db.project
+      .findOne({ where: { project_id: req.params.id } })
+      .then(function(data) {
+        res.render("project", {
+          project: data
+        });
       });
-    });
   });
 
   // Render 404 page for any unmatched routes

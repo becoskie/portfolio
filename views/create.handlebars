@@ -26,8 +26,15 @@
         <textarea class="form-control" required id="proj_op" rows="10"></textarea>
     </div>
     <div class="form-group">
-        <label for="project_type">Team or Solo Project</label>
-        <input type="text" class="form-control" required id="project_type" placeholder="enter team or solo">
+        <h4>Project Type:</h4>
+        <div class=" form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="solo" name="project" value="1">
+            <label class="form-check-label" for="solo">Solo</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" id="group" name="project" value="0">
+            <label class="form-check-label" for="solo">Group</label>
+        </div>
     </div>
     <div class="form-group">
         <label for="build_items">Items used for construction</label>

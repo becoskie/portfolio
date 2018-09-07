@@ -9,6 +9,14 @@ module.exports = function(app) {
   });
 
   // Get all projects
+  app.get("/api/projects/:id", function(req, res) {
+    db.project
+      .findOne({ where: { project_id: req.params.id } })
+      .then(function(data) {
+        rres.json(data);
+      });
+  });
+
   app.get("/api/projects", function(req, res) {
     db.project.findAll({}).then(function(dbProjects) {
       res.json(dbProjects);

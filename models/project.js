@@ -32,8 +32,8 @@ module.exports = function(sequelize, Sequelize) {
       allowNull: false
     },
 
-    projectType: {
-      type: Sequelize.TEXT,
+    solo: {
+      type: Sequelize.INTEGER(1),
       allowNull: false
     },
 
