@@ -3,7 +3,11 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index");
+    db.project.findAll({}).then(function(data) {
+      res.render("index", {
+        project: data
+      });
+    });
   });
 
   // Load example page and pass in an example by id

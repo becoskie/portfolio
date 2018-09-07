@@ -53,53 +53,16 @@
       I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.
     </p>
   </header>
-  <section class="layout-multicolumn container family-sans text-uppercase text-center py-4">
+  <section class="layout-multicolumn container family-sans text-center py-4">
     <div class="row justify-content-center py-2">
-
+{{#each project}}
       <section class="photo-modal mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="https://dummyimage.com/16:9x1600/A.png&text=+" href="#">
+        <a data-toggle="modal" data-target="#site-modal" data-highres="images/images/ken.jpg" href="#">
           <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
         </a>
-        <h5 class="layout-title mt-1">Text Heading</h5>
+        <h5 class="layout-title mt-1">{{this.title}}</h5>
       </section>
-
-      <section class="photo-modal text-center mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="https://dummyimage.com/16:9x1600/A.png&text=+" href="#">
-          <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
-        </a>
-        <h5 class="layout-title mt-1">Text Heading</h5>
-      </section>
-
-      <section class="photo-modal text-center mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="https://dummyimage.com/16:9x1600/A.png&text=+" href="#">
-          <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
-        </a>
-        <h5 class="layout-title mt-1">Text Heading</h5>
-      </section>
-
-      <section class="photo-modal mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="https://dummyimage.com/16:9x1600/A.png&text=+" href="#">
-          <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
-        </a>
-        <h5 class="layout-title mt-1">Text Heading</h5>
-      </section>
-
-      <section class="photo-modal text-center mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="https://dummyimage.com/16:9x1600/A.png&text=+" href="#">
-          <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
-        </a>
-        <h5 class="layout-title mt-1">Text Heading</h5>
-      </section>
-
-      <section class="photo-modal text-center mb-5 col-md-4">
-        <a data-toggle="modal" data-target="#site-modal" data-highres="https://dummyimage.com/16:9x1600/A.png&text=+" href="#">
-          <img class="layout-image img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
-        </a>
-        <h5 class="layout-title mt-1">Text Heading</h5>
-      </section>
-
-
-
+{{/each}}
     </div>
   </section>
 </article>
@@ -120,15 +83,17 @@
 <footer class="site-footer bg-reverse">
 
   <div class="layout-social container py-5 d-flex justify-content-center">
-    <a class="text-reverse px-2" href="https://twitter.com/planetoftheweb">
-      <i class="fab fa-twitter"></i>
+    <a class="text-reverse px-4" href="https://github.com/becoskie">
+      <i class="fab fa-github"></i>
     </a>
-    <a class="text-reverse px-2" href="https://facebook.com/viewsource">
-      <i class="fab fa-facebook"></i>
-    </a>
-    <a class="text-reverse px-2" href="https://linkedin.com/in/planetoftheweb">
+    <a class="text-reverse px-4" href="https://www.linkedin.com/in/rbecoskie/">
       <i class="fab fa-linkedin"></i>
     </a>
+    <a class="text-reverse px-4" href="https://facebook.com/viewsource">
+      <i class="far fa-envelope"></i>
+    </a>
+    
   </div>
 
 </footer>
+
