@@ -53,18 +53,15 @@ a:hover{
   color: var(--color-text);
 }
 
+img {
+  max-width: 100%;
+}
 
 .error {
   font-size: .8em;
   color:#ff5e57;
   font-style: italic;
 }
-
-#team {
-  font-weight: bold;
-  color: var(--gray);
-}
-
 
 /* site header */
 .site-header {
@@ -76,7 +73,7 @@ a:hover{
   margin-bottom: 12rem;
 }
 
-.site-header .jumbotron {
+.site-header .jumbotron, .project-header .jumbotron {
   min-height: 50vh;
   background: transparent;
 }
@@ -126,6 +123,33 @@ a:hover{
   font-size: 2em;
 }
 
+.project_git {
+  font-size: 1.75em;
+  padding-left: .5rem;
+}
+
+.project_brand {
+  font-size: 2.125em;
+}
+
+#launch_short {
+  font-size: 1.25em;
+  padding:1em 0 2rem 0;
+}
+.launch_build {
+  padding-left: 30px;
+}
+.launch_long {
+  padding: 0px 8rem;
+}
+#build {
+  font-weight: bold;
+}
+#build_items {
+  font-size:.9rem;
+}
+
+
 
 @media (max-width: 767px) {
   .navbar-toggler {
@@ -133,3 +157,8 @@ a:hover{
     outline: none;
   }
 }
+
+#long_desc, #edit_long_desc {
+  white-space: pre-wrap;
+}
+

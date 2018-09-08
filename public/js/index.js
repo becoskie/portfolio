@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   var scrolloffset = 55; //variable for menu height
 
   $("#project_submit").on("click", projectSubmit);

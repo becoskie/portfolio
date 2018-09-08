@@ -1,24 +1,33 @@
-<div class=" launch container">
-    <section>
-        <div>
-            <h1 class="jumbotron-heading" id="launch_heading">{{project.title}}</h1>
-            <p class="lead text-muted" id="launch_short">{{project.shortDesc}}</p>
+<header id="launch" class="project-header">
+    <nav class="site-nav family-sans navbar navbar-expand-md bg-white navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand project_brand" href="{{project.launchLink}}" target="_blank">{{project.title}}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <section class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="/#page-projects">home</a>
+                    <a class="nav-item nav-link" href="{{project.launchLink}}" target="_blank">launch</a>
+                    <a class="nav-item nav-link" href="{{project.gitLink}}" target="_blank"><i class="fab fa-github project_git"></i></a>
+                </div>
+            </section>
         </div>
-    </section>
-    <div class="row">
-        <div class="container col-12 mb-4">
-            <img id="launch_img" src="assets/images/ken.jpg">
+    </nav>
+    <section class="project_info container-fluid">
+        <div class="container-fluid">
+            <img src="/images/{{project.imgLink}}" alt="{{project.dataLink}}">
+            <p id="launch_short">{{project.shortDesc}}</p>
         </div>
-    </div>
-    <div class="row">
-        <div class="container col-sm-1"></div>
-        <div class="container col-sm-3" id="build_contain">
-            <p id="build_head">build</p>
-            <div></div>
+        <div class="row">
+            <div class="launch_build container col-2">
+                <p id="build">the Build</p>
+                <p id="build_items">{{project.buildItems}}</p>
+            </div>
+            <div class="launch_long container col-10">
+                <p>{{project.longDesc}}</p>
+            </div>
         </div>
-        <div class="container col-sm-7">
-            <p id="long_launch"></p>
-        </div>
-        <div class="container col-sm-1"></div>
-    </div>
-</div>
+    </section> {{!-- project_info --}}
+</header>

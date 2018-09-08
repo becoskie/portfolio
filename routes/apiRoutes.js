@@ -13,7 +13,7 @@ module.exports = function(app) {
     db.project
       .findOne({ where: { project_id: req.params.id } })
       .then(function(data) {
-        rres.json(data);
+        res.json(data);
       });
   });
 
@@ -32,15 +32,6 @@ module.exports = function(app) {
       })
       .then(function(data) {
         res.json(data);
-      });
-  });
-
-  // Delete an example by id
-  app.delete("/api/project/:id", function(req, res) {
-    db.project
-      .destroy({ where: { project_id: req.params.id } })
-      .then(function(dbProjects) {
-        res.json(dbProjects);
       });
   });
 };
