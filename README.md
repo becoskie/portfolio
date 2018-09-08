@@ -2,7 +2,7 @@
 Full Stack Developer Portfolio
 
 ## Link to project
-
+Link to wprking project:
 - [heroku](https://becoskie-portfolio.herokuapp.com/)
 
 ## Description
@@ -22,7 +22,5 @@ Developer portfolio built as a CMS. Using MYSQL to dynamically create the conten
 - sequelize
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
-
 MIT © [Ray Becoskie]()
 
