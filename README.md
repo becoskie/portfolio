@@ -28,6 +28,8 @@ Developer portfolio built as a CMS. Using MYSQL to dynamically create the conten
 
 ![screenshot-1](image_md/admin.png)
 
+[Find me on Linkedin](https://www.linkedin.com/in/rbecoskie/)
+
 ## License
 MIT © [Ray Becoskie]()
 
