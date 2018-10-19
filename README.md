@@ -6,7 +6,7 @@ Link to wprking project:
 - [heroku](https://becoskie-portfolio.herokuapp.com/)
 
 ## Description
-Developer portfolio built as a CMS. Using MYSQL to dynamically create the content. **why** the project exists.
+Developer portfolio built as a CMS. Using MYSQL to dynamically create the content.
 
 
 ## Build items
