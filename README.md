@@ -26,7 +26,7 @@ Developer portfolio built as a CMS. Using MYSQL to dynamically create the conten
 
 **Admin view**
 
-![screenshot-1](images_md/admin.png)
+![screenshot-1](/images_md/admin.png)
 
 ## License
 MIT © [Ray Becoskie]()
