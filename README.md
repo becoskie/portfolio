@@ -1,15 +1,16 @@
-## Project title
+# Ray Becoskie Porfolio
 Full Stack Developer Portfolio
+-
+### Link to project
 
-## Link to project
-Link to wprking project:
+Link to working project:
 - [heroku](https://becoskie-portfolio.herokuapp.com/)
 
 ## Description
-Developer portfolio built as a CMS. Using MYSQL to dynamically create the content.
+Developer portfolio built as a CMS. Using MYSQL to dynamically create the content. Full authenticated admin page used for handling the CRUD.
 
 
-## Build items
+## The Build
 - bcrypt-nodejs
 - body-parser
 - dotenv
@@ -20,6 +21,12 @@ Developer portfolio built as a CMS. Using MYSQL to dynamically create the conten
 - passport
 - passport-local
 - sequelize
+
+## Screenshots
+
+**Admin view**
+
+![screenshot-1](images_md/admin.png)
 
 ## License
 MIT © [Ray Becoskie]()
