@@ -160,6 +160,13 @@ img {
     border: none;
     outline: none;
   }
+
+  .launch_build {
+    padding-left: 10px;
+  }
+  .launch_long {
+    padding: 0px 10px;
+  }
 }
 
 #long_desc, #edit_long_desc {
